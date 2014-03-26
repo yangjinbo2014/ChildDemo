@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_context_are"
+        android:layout_width="fill_parent"
+        android:layout_height="250dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#999999" >
+
+        <Button
+            android:id="@+id/button_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="26dp"
+            android:layout_marginRight="48dp"
+            android:text="Skip" />
+
+        <TextView
+            android:id="@+id/textView_context"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="This is a function introduce" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_person_name_are"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_above="@+id/relativeLayout_context_are"
+        android:layout_alignParentLeft="true"
+        android:background="#888888" >
+
+        <TextView
+            android:id="@+id/textView_person_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Person_Name" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_person_are"
+        android:layout_width="300dip"
+        android:layout_height="500dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#666666" >
+    </RelativeLayout>
+
+</RelativeLayout>

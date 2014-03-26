@@ -30,6 +30,8 @@ public class MainActivity extends ActionBarActivity
             getSupportFragmentManager().beginTransaction().add(R.id.container, new PlaceholderFragment()).commit();
         }
         
+        System.out.println("======================================");
+        
         ImageView imageView = new ImageView(this);
         try
         {
@@ -43,6 +45,7 @@ public class MainActivity extends ActionBarActivity
         GenerDialog dialog = new GenerDialog(this);
         dialog.setContentView(imageView);
         dialog.show();
+        
     }
     
     @Override

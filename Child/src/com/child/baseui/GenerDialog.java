@@ -5,7 +5,8 @@ import android.content.Context;
 import android.view.Window;
 
 /**
- * 通用对话框
+ * 通用对话框<br>
+ * 用于显示弹出内容，归一化抽象处理<br>
  * 
  * @author Owen
  * 
