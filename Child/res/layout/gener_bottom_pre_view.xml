@@ -6,7 +6,7 @@
     <RelativeLayout
         android:id="@+id/relativeLayout_context_are"
         android:layout_width="fill_parent"
-        android:layout_height="250dip"
+        android:layout_height="200dip"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="#999999" >
@@ -49,9 +49,10 @@
 
     <RelativeLayout
         android:id="@+id/relativeLayout_person_are"
-        android:layout_width="300dip"
-        android:layout_height="500dip"
+        android:layout_width="250dip"
+        android:layout_height="400dip"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
         android:layout_centerHorizontal="true"
         android:background="#666666" >
     </RelativeLayout>
