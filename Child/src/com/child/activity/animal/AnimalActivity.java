@@ -4,9 +4,9 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.RelativeLayout;
 
-import com.child.AppContext;
 import com.child.generui.GenerBottomPreView;
 import com.child.generui.GenerTopSelectView;
+import com.child.server.AppContext;
 import com.example.child.R;
 
 public class AnimalActivity extends Activity

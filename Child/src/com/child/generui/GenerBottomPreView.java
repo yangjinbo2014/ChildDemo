@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.child.AppContext;
+import com.child.server.AppContext;
 import com.example.child.R;
 
 /**
@@ -18,30 +18,37 @@ import com.example.child.R;
  * @author Owen
  * 
  */
-public class GenerBottomPreView
+public class GenerBottomPreView extends BaseView
 {
-    private View view;
-    
     private Context context;
     
     public GenerBottomPreView(Context context)
     {
         this.context = context;
-        view = LayoutInflater.from(context).inflate(R.layout.gener_bottom_pre_view, null);
+        setView(LayoutInflater.from(context).inflate(R.layout.gener_bottom_pre_view, null));
         
-        ((Button)view.findViewById(R.id.button_skip)).setOnClickListener(new OnClickListener()
+        initListener();
+    }
+    
+    public void initListener()
+    {
+        ((Button)getView().findViewById(R.id.button_skip)).setOnClickListener(new OnClickListener()
         {
             
             @Override
             public void onClick(View v)
             {
                 AppContext.getInstance().getSoundManager().stopSound("1.mp3");
-                view.setVisibility(View.GONE);
+                getView().setVisibility(View.GONE);
             }
         });
-        
     }
     
+    /**
+     * 设置人物左右位置类型
+     * 
+     * @param isLeft
+     */
     public void setPersonPosition(boolean isLeft)
     {
         if (isLeft)
@@ -49,37 +56,47 @@ public class GenerBottomPreView
             RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(300, 500);
             layoutParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
             layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-            view.findViewById(R.id.relativeLayout_person_are).setLayoutParams(layoutParams);
+            getView().findViewById(R.id.relativeLayout_person_are).setLayoutParams(layoutParams);
         }
         else
         {
             RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(300, 500);
             layoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
             layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-            view.findViewById(R.id.relativeLayout_person_are).setLayoutParams(layoutParams);
+            getView().findViewById(R.id.relativeLayout_person_are).setLayoutParams(layoutParams);
         }
     }
     
-    public void setPersonImage()
+    /**
+     * 设置人物资源
+     * 
+     * @param res
+     */
+    public void setPersonImage(int res)
     {
-        
+        ((RelativeLayout)getView().findViewById(R.id.relativeLayout_person_are)).setBackgroundResource(res);
     }
     
+    /**
+     * 设置人物姓名
+     * 
+     * @param s
+     */
     public void setPersonName(String s)
     {
-        TextView textView = (TextView)view.findViewById(R.id.textView_person_name);
+        TextView textView = (TextView)getView().findViewById(R.id.textView_person_name);
         textView.setText(s);
     }
     
+    /**
+     * 设置介绍文本
+     * 
+     * @param s
+     */
     public void setIntroduceStr(String s)
     {
-        TextView textView = (TextView)view.findViewById(R.id.textView_context);
+        TextView textView = (TextView)getView().findViewById(R.id.textView_context);
         textView.setText(s);
-    }
-    
-    public View getView()
-    {
-        return view;
     }
     
 }

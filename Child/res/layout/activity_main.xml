@@ -3,30 +3,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    tools:context="com.child.activity.MainActivity"
+    tools:context="com.child.activity.ahead.MainActivity"
     tools:ignore="MergeRootFrame" >
 
-    <Button
-        android:id="@+id/button_play"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Demo_1" />
+    <HorizontalScrollView
+        android:id="@+id/main_page_horizontalScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" >
 
-    <Button
-        android:id="@+id/button_play2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/button_play"
-        android:text="Demo_2" />
-
-    <Button
-        android:id="@+id/button_play3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/button_play2"
-        android:text="Demo_3" />
+        <LinearLayout
+            android:id="@+id/main_page_horizontalScrollView_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </HorizontalScrollView>
 
 </RelativeLayout>
-

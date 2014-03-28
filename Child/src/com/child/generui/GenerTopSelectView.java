@@ -15,21 +15,19 @@ import com.example.child.R;
  * @author Owen
  * 
  */
-public class GenerTopSelectView
+public class GenerTopSelectView extends BaseView
 {
-    private View view;
-    
     private Button btn1, btn2;
     
     private TextView tv;
     
     public GenerTopSelectView(Context context)
     {
-        view = LayoutInflater.from(context).inflate(R.layout.gener_top_select_view, null);
+        setView(LayoutInflater.from(context).inflate(R.layout.gener_top_select_view, null));
         
-        btn1 = (Button)view.findViewById(R.id.button1);
-        btn2 = (Button)view.findViewById(R.id.button2);
-        tv = (TextView)view.findViewById(R.id.textView1);
+        btn1 = (Button)getView().findViewById(R.id.button1);
+        btn2 = (Button)getView().findViewById(R.id.button2);
+        tv = (TextView)getView().findViewById(R.id.textView1);
     }
     
     public void setTittle(String s)
@@ -55,11 +53,6 @@ public class GenerTopSelectView
     public void setRightButtonText(String s)
     {
         btn2.setText(s);
-    }
-    
-    public View getView()
-    {
-        return view;
     }
     
 }
