@@ -3,7 +3,16 @@ Child项目分解:
 ChildMaster--Owen
 项目主体；维护Packet状态、维管、升级、用户信息并作为主程序入口的初始化apk；
 
-ChildAnimal--Owen
-支线功能；动画拼图；
+ChildAnimalShadow--Owen
+支线功能；动物影子；A
+
+ChildAnimalWorld--Owen
+支线功能：动物世界：B
+
+ChildPlant--Yang
+支线功能：植物王国：C
+
+ChildHistory--Owen
+支线功能：史前探索：D
 
 =========
