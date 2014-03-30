@@ -2,16 +2,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.childanimal.ChildAnimalActivity"
+    android:background="#FF822E"
+    tools:context="com.childanimal.activity.ChildAnimalActivity"
     tools:ignore="MergeRootFrame" >
 
     <RelativeLayout
+        android:id="@+id/top_are"
         android:layout_width="fill_parent"
         android:layout_height="50dip"
         android:layout_alignParentTop="true" >
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/bottom_are"
         android:layout_width="fill_parent"
         android:layout_height="150dip"
         android:layout_alignParentBottom="true" >

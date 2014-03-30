@@ -1,5 +1,8 @@
 Child项目分解:
 
+ChildSupport--Owen
+项目公共包：公共的UI、Sound组件的通用，请在各自的工程中选择Lib加入此工程；
+
 ChildMaster--Owen
 项目主体；维护Packet状态、维管、升级、用户信息并作为主程序入口的初始化apk；
 

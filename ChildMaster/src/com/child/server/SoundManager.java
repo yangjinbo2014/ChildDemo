@@ -6,7 +6,6 @@ import java.util.HashMap;
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.SoundPool;
-import android.media.SoundPool.OnLoadCompleteListener;
 
 public class SoundManager
 {
@@ -16,31 +15,26 @@ public class SoundManager
     
     public HashMap<String, Integer> soundMap = new HashMap<>();
     
+    public int keyCount = 1;
+    
     public SoundManager(Context context)
     {
-        this.context = context;
+        setContext(context);
         pool = new SoundPool(20, AudioManager.STREAM_MUSIC, 0);
-        pool.setOnLoadCompleteListener(new OnLoadCompleteListener()
-        {
-            
-            @Override
-            public void onLoadComplete(SoundPool soundPool, int sampleId, int status)
-            {
-                System.out.println("º”‘ÿÕÍ≥… : " + sampleId + "//" + status);
-            }
-        });
-        
-        addSound("1.mp3", 1);
-        addSound("2.mp3", 2);
-        addSound("3.mp3", 3);
     }
     
-    public void addSound(String fileName, int key)
+    public void setContext(Context context)
+    {
+        this.context = context;
+    }
+    
+    public void addSound(String fileName)
     {
         try
         {
-            pool.load(context.getAssets().openFd(fileName), key);
-            soundMap.put(fileName, (Integer)key);
+            pool.load(context.getAssets().openFd(fileName), keyCount);
+            soundMap.put(fileName, (Integer)keyCount);
+            keyCount++;
         }
         catch (IOException e)
         {

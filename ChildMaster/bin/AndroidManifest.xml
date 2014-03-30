@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.child"
+    package="com.child"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         <activity
-            android:name="com.child.activity.main.MainActivity"
+            android:name="com.child.activity.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,10 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.child.activity.animal.AnimalActivity"
-            android:label="@string/title_activity_animal" >
-        </activity>
+        <receiver android:name="com.child.server.CCoreBroadcastReceiver"></receiver>
+        <service android:name="com.child.server.CCoreService"></service>
     </application>
 
 </manifest>

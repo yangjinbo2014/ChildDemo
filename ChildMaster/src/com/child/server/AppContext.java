@@ -8,8 +8,6 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 
 /**
- * 全局上下文<br>
- * 暂时空，后续有业务的句柄往里面放；
  * 
  * @author Owen
  * 
@@ -20,21 +18,9 @@ public class AppContext
     
     private Context context = null;
     
-    private SoundManager soundManager = null;
-    
     private UserManager userManager = null;
     
     private ArrayList<String> packetList = null;
-    
-    public SoundManager getSoundManager()
-    {
-        return soundManager;
-    }
-    
-    public void setSoundManager(SoundManager soundManager)
-    {
-        this.soundManager = soundManager;
-    }
     
     public Context getContext()
     {
@@ -48,7 +34,6 @@ public class AppContext
     
     public static AppContext getInstance()
     {
-        /* 双重锁 */
         if (instance == null)
         {
             synchronized (AppContext.class)
@@ -64,14 +49,12 @@ public class AppContext
     
     public void initAppContext()
     {
-        soundManager = new SoundManager(context);
         userManager = new UserManager();
         getInstallPacketList();
     }
     
     public void destoryAppContext()
     {
-        soundManager.destorySoundManager();
         this.context = null;
         instance = null;
     }
