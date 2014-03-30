@@ -9,15 +9,24 @@
     <RelativeLayout
         android:id="@+id/top_are"
         android:layout_width="fill_parent"
-        android:layout_height="50dip"
-        android:layout_alignParentTop="true" >
+        android:layout_height="100dip"
+        android:layout_alignParentTop="true"
+        android:gravity="center" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/body_are"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center" >
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/bottom_are"
         android:layout_width="fill_parent"
-        android:layout_height="150dip"
-        android:layout_alignParentBottom="true" >
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center" >
     </RelativeLayout>
 
 </RelativeLayout>

@@ -6,7 +6,7 @@
     <RelativeLayout
         android:id="@+id/relativeLayout_context_are"
         android:layout_width="fill_parent"
-        android:layout_height="200dip"
+        android:layout_height="150dip"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="#66B3AD" >
@@ -35,31 +35,40 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/relativeLayout_person_name_are"
-        android:layout_width="fill_parent"
-        android:layout_height="50dip"
-        android:layout_above="@+id/relativeLayout_context_are"
-        android:layout_alignParentLeft="true"
-        android:background="#66B3AD" >
-
-        <TextView
-            android:id="@+id/textView_person_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:text="Person_Name"
-            android:textColor="@android:color/white"
-            android:textSize="26sp" />
-    </RelativeLayout>
-
-    <RelativeLayout
         android:id="@+id/relativeLayout_person_are"
         android:layout_width="300dip"
         android:layout_height="400dip"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_centerHorizontal="true" >
+        android:layout_centerHorizontal="true"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/img_person"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/ic_launcher" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_person_name_are"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="149dp"
+            android:alpha="0.7"
+            android:background="#66B3AD" >
+
+            <TextView
+                android:id="@+id/textView_person_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Person_Name"
+                android:textColor="@android:color/white"
+                android:textSize="26sp" />
+        </RelativeLayout>
     </RelativeLayout>
 
 </RelativeLayout>

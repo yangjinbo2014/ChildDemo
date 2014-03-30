@@ -7,6 +7,12 @@ import android.content.Context;
 import android.media.AudioManager;
 import android.media.SoundPool;
 
+/**
+ * Sound¶ÌÉùÒô¹ÜÀí<br>
+ * 
+ * @author Owen
+ * 
+ */
 public class SoundManager
 {
     private Context context;

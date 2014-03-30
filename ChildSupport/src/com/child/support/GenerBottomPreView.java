@@ -5,12 +5,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.child.support.impl.BaseView;
 import com.childsupport.R;
 
 /**
+ * 底部介绍的统一的实现<br>
  * @author Owen
  * 
  */
@@ -59,7 +62,7 @@ public class GenerBottomPreView extends BaseView
     
     public void setPersonImage(int res)
     {
-        ((RelativeLayout)getView().findViewById(R.id.relativeLayout_person_are)).setBackgroundResource(res);
+        ((ImageView)getView().findViewById(R.id.img_person)).setImageResource(res);
     }
     
     public void setPersonName(String s)

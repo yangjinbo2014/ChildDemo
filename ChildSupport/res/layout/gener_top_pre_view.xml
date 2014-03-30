@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical" >
+
+    <TextView
+        android:id="@+id/tv_top_tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="91dp"
+        android:background="#FFEA01"
+        android:text="模块名称"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/btn_top_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_top_tittle"
+        android:layout_alignBottom="@+id/tv_top_tittle"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="53dp"
+        android:background="#FFEA01"
+        android:text="Left"
+        android:textColor="@android:color/black"
+        android:textSize="28sp" />
+
+    <Button
+        android:id="@+id/btn_top_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_top_tittle"
+        android:layout_alignBottom="@+id/btn_top_left"
+        android:layout_marginRight="65dp"
+        android:layout_toLeftOf="@+id/btn_top_left"
+        android:background="#FFEA01"
+        android:text="Right"
+        android:textColor="@android:color/black"
+        android:textSize="28sp" />
+
+</RelativeLayout>

@@ -14,15 +14,20 @@ public final class R {
         public static int ic_launcher=0x7f020000;
     }
     public static final class id {
+        public static int btn_top_left=0x7f060008;
+        public static int btn_top_right=0x7f060009;
         public static int button_skip=0x7f060001;
+        public static int img_person=0x7f060004;
         public static int relativeLayout_context_are=0x7f060000;
-        public static int relativeLayout_person_are=0x7f060005;
-        public static int relativeLayout_person_name_are=0x7f060003;
+        public static int relativeLayout_person_are=0x7f060003;
+        public static int relativeLayout_person_name_are=0x7f060005;
         public static int textView_context=0x7f060002;
-        public static int textView_person_name=0x7f060004;
+        public static int textView_person_name=0x7f060006;
+        public static int tv_top_tittle=0x7f060007;
     }
     public static final class layout {
         public static int gener_bottom_pre_view=0x7f030000;
+        public static int gener_top_pre_view=0x7f030001;
     }
     public static final class string {
         public static int app_name=0x7f040000;
