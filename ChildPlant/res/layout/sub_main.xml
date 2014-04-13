@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/plant_content_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/status_bar_view"
+        layout="@layout/status_bar" />
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <include
+            android:id="@+id/functions_menu_view"
+            layout="@layout/functions_menu" />
+    </FrameLayout>
+
+</LinearLayout>
