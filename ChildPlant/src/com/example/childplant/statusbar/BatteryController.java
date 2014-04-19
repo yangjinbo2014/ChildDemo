@@ -111,11 +111,11 @@ public class BatteryController {
 			int empty = R.drawable.ic_battery_empty;
 			int full = R.drawable.ic_battery_full;
 			if (charging) {
-				empty = R.drawable.ic_battery_charging;
-				battery01.setImageResource(empty);
-				battery02.setImageResource(empty);
-				battery03.setImageResource(empty);
-				battery04.setImageResource(empty);
+				filled = R.drawable.ic_battery_charging;
+				battery01.setImageResource(filled);
+				battery02.setImageResource(filled);
+				battery03.setImageResource(filled);
+				battery04.setImageResource(filled);
 				return;
 			}
 			
@@ -139,7 +139,7 @@ public class BatteryController {
 				battery02.setImageResource(filled);
 				battery03.setImageResource(filled);
 				battery04.setImageResource(empty);
-			} else if (mLevel < 95 || charging) {
+			} else if (mLevel < 95 ) {
 				battery01.setImageResource(filled);
 				battery02.setImageResource(filled);
 				battery03.setImageResource(filled);
